@@ -36,7 +36,7 @@ def registerPageB(request):
         if form.is_valid():
             form.save()
             user=form.cleaned_data.get('username')
-            messages.success(request,"account was create for" +user)
+            messages.success(request,"account was create for " +user)
             return redirect('loginb')
 
 
