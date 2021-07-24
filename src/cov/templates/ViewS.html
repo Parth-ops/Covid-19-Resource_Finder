@@ -5,10 +5,11 @@
 <html>
     <body>
         <div class="btn">
-        <input type="button" class="button" value="Generate a table." onclick="generate_table()">
+        <input type="button" id="btn2" class="button" value="Generate a table." onclick="generate_table()">
             </div>
         <script>
-
+            
+            
             var data = JSON.parse('{{ data2 | escapejs }}');
             var values = (Object.values(data));
             //  console.log(values)
@@ -87,7 +88,10 @@
   // sets the border attribute of tbl to 2;
   tbl.setAttribute("border", "2");
    tbl.setAttribute("class", "hello");
+
+   document.getElementById("btn2").onclick=null;
 }
+            
 
         </script>
     <style>
